@@ -227,7 +227,7 @@ const navigation: Record<string, NavigationItem[]> = {
                 <div v-if="typeof item.icon === 'string'" class="w-6 h-6" aria-hidden="true" v-html="item.icon" />
                 <component :is="item.icon" v-else class="w-6 h-6" aria-hidden="true" />
                 <span class="ml-3 text-base font-bold text-gray-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600">
-                  {{ item.name }}
+                  {{ item.name() }}
                 </span>
               </a>
             </li>
@@ -282,7 +282,7 @@ const navigation: Record<string, NavigationItem[]> = {
                     :target="item.target"
                     class="text-base text-gray-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 hover:text-gray-900 focus:border-blue-600"
                   >
-                    {{ item.name }}
+                    {{ item.name() }}
                   </a>
                 </li>
               </ul>
@@ -314,7 +314,7 @@ const navigation: Record<string, NavigationItem[]> = {
                     :href="item.href"
                     class="text-base text-gray-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 hover:text-gray-900 focus:border-blue-600"
                   >
-                    {{ item.name }}
+                    {{ item.name() }}
                   </a>
                 </li>
               </ul>
@@ -328,7 +328,7 @@ const navigation: Record<string, NavigationItem[]> = {
                     :href="item.href"
                     class="text-base text-gray-500 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 hover:text-gray-900 focus:border-blue-600"
                   >
-                    {{ item.name }}
+                    {{ item.name() }}
                   </a>
                 </li>
               </ul>
